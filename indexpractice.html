@@ -1,0 +1,12 @@
+//SASS syntax practice be // variab /*$base-color: #008000; .class { border: 2px solid $base-color; } / //The default
+variables can be overwritten if the user wants to use a different value .. //2 variables can have the same name, one can
+be global and the other lo al //the code below with !global, sets a global variable within a local scope .. /* .content
+{ $variable: second global value !global; value: $variable; } */ //this is equally called a global flag--- this can be
+used to set a global variable already set at the top of the f //SASS doesn't support certain types of Interpolation
+hence the introduction of MA /* $theme-colors: ( "success": #28a745, "info": #17a2b8, "warning": #ffc107, ); .alert { //
+Instead of $theme-color-#{warning} background-color: map.get($theme-colors, "warning"); } / /*$theme-colors: ("success":
+#28a745, "info": #17a2b8, "warning": #ffc107) .alert // Instead of $theme-color-#{warning} background-color:
+map.get($theme-colors, "warning") / //Interpolation can be used almost anywhere in a Sass stylesheet to embed the result
+of a SassScript expression into a chunk of C S. //Just wrap an expression in # . /* so @mixin boxDesign($size, $color) {
+height: $size; background-color: $color; @if ($color == green) { color: white; } } .box { @include boxDesign(10px,
+"red") };

@@ -3,19 +3,19 @@ nav {
 }
 nav .nav-section {
   display: flex;
-  border-bottom: 1px solid black;
   justify-content: space-between;
 }
 nav .nav-section img {
   height: 80px;
   width: 80px;
+  align-self: center;
+  border-radius: 10px;
 }
 nav .nav-section ul {
   padding-top: 15px;
 }
 nav .nav-section ul li {
   display: inline-block;
-  text-decoration: none;
   font-size: 1.2rem;
   padding-inline: 10px;
   text-decoration: none;
@@ -23,57 +23,85 @@ nav .nav-section ul li {
 
 .section-container {
   display: flex;
-  background-color: #640fcf;
+  background-color: rgb(62, 14, 123);
+  border-radius: 10px;
   margin-top: 10px;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .section-left-box {
   width: 500px;
   height: 500px;
   font-size: 2rem;
+  padding-left: 15px;
+  color: rgb(203, 195, 210);
+  text-shadow: 0 0 10px 0;
   vertical-align: bottom;
   background-color: aquamarine color(rgb red);
 }
 
-.box-1 {
-  width: 100px;
-  height: 100px;
-  flex-wrap: wrap;
-  display: inline;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.box-2 {
-  width: 100px;
-  height: 100px;
-  flex-wrap: wrap;
-  display: inline;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.box-3 {
-  width: 100px;
-  height: 100px;
-  flex-wrap: wrap;
-  display: inline;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.box-4 {
-  width: 100px;
-  height: 100px;
-  flex-wrap: wrap;
-  display: inline;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-button {
+.btn-1 {
   margin: 10px 10px 10px 5px;
   background-color: red;
   padding: 10px;
   font-size: 0.9rem;
+}
+
+.btn-2 {
+  margin: 10px 10px 10px 5px;
+  background-color: blue;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.btn-3 {
+  margin: 10px 10px 10px 5px;
+  background-color: black;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: white;
+}
+
+/* .btn-4 {
+  @include baseButton();
+  padding: 20px;
+} */
+.btn-primary {
+  background-color: #008000;
+  margin: 10px 10px 10px 5px;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.btn-secondary {
+  background-color: #0000ff;
+  margin: 10px 10px 10px 5px;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.btn-tertiary {
+  background-color: #800080;
+  margin: 10px 10px 10px 5px;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.class-container {
+  background-color: white;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.class-container .display-card {
+  background-color: rgb(62, 14, 123);
+  display: flex;
+  min-width: 50px;
+  padding: 50px;
+}
+.class-container .display-card img {
+  width: 100%;
+  border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */

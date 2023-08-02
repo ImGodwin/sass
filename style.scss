@@ -1,21 +1,27 @@
+$primary-color: #008000;
+$secondary-color: #0000ff;
+$university-color: #800080;
+
 nav {
   height: 70px;
 
   .nav-section {
     display: flex;
-    border-bottom: 1px solid black;
+
     justify-content: space-between;
 
     img {
       height: 80px;
       width: 80px;
+      align-self: center;
+      border-radius: 10px;
     }
     ul {
       padding-top: 15px;
 
       li {
         display: inline-block;
-        text-decoration: none;
+
         font-size: 1.2rem;
         padding-inline: 10px;
         text-decoration: none;
@@ -26,15 +32,20 @@ nav {
 
 .section-container {
   display: flex;
-  background-color: #640fcf;
+  background-color: rgb(62, 14, 123);
+  border-radius: 10px;
   margin-top: 10px;
+  justify-content: space-around;
+  align-items: center;
 }
 
 @mixin section() {
   width: 500px;
   height: 500px;
   font-size: 2rem;
-
+  padding-left: 15px;
+  color: rgb(203, 195, 210);
+  text-shadow: 0 0 10px 0;
   vertical-align: bottom;
   background-color: aquamarine color(rgb red);
 }
@@ -52,29 +63,69 @@ nav {
   object-fit: cover;
 }
 
-.box-1 {
-  @include section2(200px, blue, color);
-}
-
-.box-2 {
-  @include section2(200px, url("https://unsplash.com/photos/yxZSAjyToP4"), image);
-}
-
-.box-3 {
-  @include section2(200px, url("https://unsplash.com/photos/yxZSAjyToP4"), image);
-}
-
-.box-4 {
-  @include section2(200px, url("https://unsplash.com/photos/yxZSAjyToP4"), image);
-}
-
-@mixin btn() {
+@mixin btn($main-color) {
   margin: 10px 10px 10px 5px;
-  background-color: red;
+  background-color: $main-color;
+  padding: 10px;
+  font-size: 0.9rem;
+
+  @if ($main-color == black) {
+    color: white;
+  }
+}
+
+.btn-1 {
+  @include btn(red);
+}
+
+.btn-2 {
+  @include btn(blue);
+}
+
+.btn-3 {
+  @include btn(black);
+}
+
+@mixin baseButton() {
+  margin: 10px 10px 10px 5px;
   padding: 10px;
   font-size: 0.9rem;
 }
 
-button {
-  @include btn();
+$btn-colors: (
+  primary: $primary-color,
+  secondary: $secondary-color,
+  tertiary: $university-color,
+);
+
+/* .btn-4 {
+  @include baseButton();
+  padding: 20px;
+} */
+
+@each $key, $value in $btn-colors {
+  .btn-#{$key} {
+    background-color: $value;
+    @include baseButton();
+  }
+}
+
+.class-container {
+  background-color: white;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .display-card {
+    background-color: rgb(62, 14, 123);
+    display: flex;
+    min-width: 50px;
+    padding: 50px;
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
 }

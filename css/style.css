@@ -23,11 +23,14 @@ nav .nav-section ul li {
 
 .section-container {
   display: flex;
+  background-color: #640fcf;
+  margin-top: 10px;
 }
 
 .section-left-box {
   width: 500px;
   height: 500px;
+  font-size: 2rem;
   vertical-align: bottom;
   background-color: aquamarine color(rgb red);
 }
@@ -39,7 +42,6 @@ nav .nav-section ul li {
   display: inline;
   -o-object-fit: cover;
      object-fit: cover;
-  background-color: blue;
 }
 
 .box-2 {
@@ -49,7 +51,6 @@ nav .nav-section ul li {
   display: inline;
   -o-object-fit: cover;
      object-fit: cover;
-  background-image: url("https://unsplash.com/photos/yxZSAjyToP4");
 }
 
 .box-3 {
@@ -59,7 +60,6 @@ nav .nav-section ul li {
   display: inline;
   -o-object-fit: cover;
      object-fit: cover;
-  background-image: url("https://unsplash.com/photos/yxZSAjyToP4");
 }
 
 .box-4 {
@@ -69,5 +69,11 @@ nav .nav-section ul li {
   display: inline;
   -o-object-fit: cover;
      object-fit: cover;
-  background-image: url("https://unsplash.com/photos/yxZSAjyToP4");
+}
+
+button {
+  margin: 10px 10px 10px 5px;
+  background-color: red;
+  padding: 10px;
+  font-size: 0.9rem;
 }/*# sourceMappingURL=style.css.map */

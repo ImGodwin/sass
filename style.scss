@@ -26,11 +26,15 @@ nav {
 
 .section-container {
   display: flex;
+  background-color: #640fcf;
+  margin-top: 10px;
 }
 
 @mixin section() {
   width: 500px;
   height: 500px;
+  font-size: 2rem;
+
   vertical-align: bottom;
   background-color: aquamarine color(rgb red);
 }
@@ -44,8 +48,8 @@ nav {
   height: 100px;
   flex-wrap: wrap;
   display: inline;
+
   object-fit: cover;
-  background-#{$property}: $value;
 }
 
 .box-1 {
@@ -62,4 +66,15 @@ nav {
 
 .box-4 {
   @include section2(200px, url("https://unsplash.com/photos/yxZSAjyToP4"), image);
+}
+
+@mixin btn() {
+  margin: 10px 10px 10px 5px;
+  background-color: red;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+button {
+  @include btn();
 }
